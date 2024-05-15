@@ -5,6 +5,7 @@ ARG INSTALL_JDK=false
 COPY SHIR C:/SHIR/
 
 RUN ["powershell", "C:/SHIR/build.ps1"]
+RUN ["powershell", "C:/SHIR/installodbc.ps1"]
 
 ENTRYPOINT ["powershell", "C:/SHIR/setup.ps1"]
 
